@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méthodes de correction PPK et PPP en drone photogrammétrie</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+        }
+        .method-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .advantages {
+            background-color: #e8f6f3;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .limitations {
+            background-color: #fdebd0;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Méthodes de correction de positionnement en drone photogrammétrie</h1>
+    
+    <div class="method-box">
+        <h2>PPK (Post-Processing Kinematic)</h2>
+        <p>Le PPK est une technique de correction différentielle qui utilise les données d'une station de base GNSS locale pour améliorer la précision du positionnement du drone après le vol.</p>
+        
+        <div class="advantages">
+            <h3>Avantages :</h3>
+            <ul>
+                <li>Haute précision (précision centimétrique possible)</li>
+                <li>Fiabilité élevée</li>
+                <li>Idéal pour les zones avec une bonne infrastructure GNSS</li>
+            </ul>
+        </div>
+        
+        <div class="limitations">
+            <h3>Limitations :</h3>
+            <ul>
+                <li>Nécessite une station de base à proximité</li>
+                <li>Distance limitée par rapport à la station de base</li>
+                <li>Coût supplémentaire pour l'équipement de la station de base</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="method-box">
+        <h2>PPP (Precise Point Positioning)</h2>
+        <p>Le PPP est une technique de positionnement absolu qui utilise des données précises d'orbites et d'horloges des satellites pour corriger la position du drone, sans nécessiter de station de base.</p>
+        
+        <div class="advantages">
+            <h3>Avantages :</h3>
+            <ul>
+                <li>Pas besoin de station de base</li>
+                <li>Couverture mondiale</li>
+                <li>Solution économique</li>
+            </ul>
+        </div>
+        
+        <div class="limitations">
+            <h3>Limitations :</h3>
+            <ul>
+                <li>Précision légèrement inférieure au PPK</li>
+                <li>Temps de convergence plus long</li>
+                <li>Dépendance aux services de correction globaux</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Notre méthodologie</h2>
+    <div class="method-box" style="background-color: #e3f2fd;">
+        <p>Dans notre étude, nous utilisons une approche hybride :</p>
+        <ul>
+            <li><strong>PPP</strong> : Utilisé pour le positionnement précis de notre station de base</li>
+            <li><strong>PPK</strong> : Appliqué pour la correction des positions du drone et des points de contrôle au sol (cibles), en utilisant les coordonnées PPP de la base comme référence</li>
+        </ul>
+        <p>Cette approche combine les avantages des deux méthodes :</p>
+        <ul>
+            <li>Pas besoin d'un point de référence connu pour la station de base (grâce au PPP)</li>
+            <li>Haute précision relative entre les images de drone et les cibles au sol (grâce au PPK)</li>
+        </ul>
+    </div>
+
+</body>
+</html>
