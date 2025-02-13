@@ -49,6 +49,15 @@
     </style>
 </head>
 <body>
+    <!-- Section pour la vidéo d'introduction -->
+    <section id="intro-video" style="text-align: center; margin-bottom: 20px;">
+        <iframe width="560" height="315" src="https://youtu.be/Bxehdqhl-Xw" 
+            title="Présentation vidéo" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </section>
+
     <h1>Méthodes de correction de positionnement en drone photogrammétrie</h1>
     
     <div class="method-box">
@@ -99,7 +108,7 @@
 
     <h2>Notre méthodologie</h2>
     <div class="method-box" style="background-color: #e3f2fd;">
-        <p>Dans notre étude, nous utilisons une approche hybride. :</p>
+        <p>Dans notre étude, nous utilisons une approche hybride :</p>
         <ul>
             <li><strong>PPP</strong> : Utilisé pour le positionnement précis de notre station de base</li>
             <li><strong>PPK</strong> : Appliqué pour la correction des positions du drone et des points de contrôle au sol (cibles), en utilisant les coordonnées PPP de la base comme référence</li>
@@ -110,6 +119,5 @@
             <li>Haute précision relative entre les images de drone et les cibles au sol (grâce au PPK)</li>
         </ul>
     </div>
-
 </body>
 </html>
